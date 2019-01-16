@@ -25,7 +25,7 @@
 		</javaTypeResolver>
 
 		<!-- 生成实体类地址 -->
-		<javaModelGenerator targetPackage="com.rmbih.model" targetProject="rmbih">
+		<javaModelGenerator targetPackage="com.rmbih.model" targetProject="rmbih/src/main/java">
 			<!-- 是否在当前路径下新加一层schema,eg：fase路径com.rmbih.model， true:com.rmbih.model.[schemaName] -->
 			<property name="enableSubPackages" value="false" />
 			<!-- 是否针对string类型的字段在set的时候进行trim调用 -->
@@ -33,13 +33,13 @@
 		</javaModelGenerator>
 
 		<!-- 生成mapxml文件 -->
-		<sqlMapGenerator targetPackage="com.rmbih.mapper" targetProject="rmbih">
+		<sqlMapGenerator targetPackage="com.rmbih.mapper" targetProject="rmbih/src/main/resources">
 			<!-- 是否在当前路径下新加一层schema,eg：fase路径com.rmbih.mapper， true:com.rmbih.mapper.[schemaName] -->
 			<property name="enableSubPackages" value="false" />
 		</sqlMapGenerator>
 
 		<!-- 生成mapxml对应client，也就是接口dao -->
-		<javaClientGenerator targetPackage="com.rmbih.dao" targetProject="rmbih" type="XMLMAPPER">
+		<javaClientGenerator targetPackage="com.rmbih.dao" targetProject="rmbih/src/main/java" type="XMLMAPPER">
 			<!-- 是否在当前路径下新加一层schema,eg：fase路径com.rmbih.IDao， true:com.rmbih.IDao.[schemaName] -->
 			<property name="enableSubPackages" value="false" />
 		</javaClientGenerator>
